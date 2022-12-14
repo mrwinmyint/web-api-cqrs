@@ -1,0 +1,9 @@
+D:\TECH\PRACTICE\C#\simple-net-webapi\Assessment\Application\obj\Debug\Application.csproj.AssemblyReference.cache
+D:\TECH\PRACTICE\C#\simple-net-webapi\Assessment\Application\obj\Debug\Application.csproj.CoreCompileInputs.cache
+D:\TECH\PRACTICE\C#\simple-net-webapi\Assessment\Application\bin\Debug\Application.dll
+D:\TECH\PRACTICE\C#\simple-net-webapi\Assessment\Application\bin\Debug\Application.pdb
+D:\TECH\PRACTICE\C#\simple-net-webapi\Assessment\Application\bin\Debug\Domain.dll
+D:\TECH\PRACTICE\C#\simple-net-webapi\Assessment\Application\bin\Debug\Domain.pdb
+D:\TECH\PRACTICE\C#\simple-net-webapi\Assessment\Application\obj\Debug\Application.csproj.CopyComplete
+D:\TECH\PRACTICE\C#\simple-net-webapi\Assessment\Application\obj\Debug\Application.dll
+D:\TECH\PRACTICE\C#\simple-net-webapi\Assessment\Application\obj\Debug\Application.pdb

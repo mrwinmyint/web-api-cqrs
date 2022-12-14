@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BEF159A6-B5BF-4472-AA4C-0791CA78073F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Application</RootNamespace>
+    <AssemblyName>Application</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Albums\Queries\GetAlbumsList\AlbumModel.cs" />
+    <Compile Include="Albums\Queries\GetAlbumsList\GetAlbumsListQuery.cs" />
+    <Compile Include="Albums\Queries\GetAlbumsList\IGetAlbumsListQuery.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Collection\GetCollection\CollectionModel.cs" />
+    <Compile Include="Collection\GetCollection\GetCollectionQuery.cs" />
+    <Compile Include="Collection\GetCollection\IGetCollectionQuery.cs" />
+    <Compile Include="Interfaces\Persistence\IAlbumRepository.cs" />
+    <Compile Include="Interfaces\Persistence\IPostRepository.cs" />
+    <Compile Include="Interfaces\Persistence\IRepository.cs" />
+    <Compile Include="Interfaces\Persistence\IUnitOfWork.cs" />
+    <Compile Include="Interfaces\Persistence\IUserRepository.cs" />
+    <Compile Include="Posts\Commands\CreatePost\CreatePostCommand.cs" />
+    <Compile Include="Posts\Commands\CreatePost\CreatePostModel.cs" />
+    <Compile Include="Posts\Commands\CreatePost\Factory\IPostFactory.cs" />
+    <Compile Include="Posts\Commands\CreatePost\Factory\PostFactory.cs" />
+    <Compile Include="Posts\Commands\CreatePost\ICreatePostCommand.cs" />
+    <Compile Include="Posts\Commands\CreatePost\Repository\IPostRepositoryFacade.cs" />
+    <Compile Include="Posts\Commands\CreatePost\Repository\PostRepositoryFacade.cs" />
+    <Compile Include="Posts\Commands\DeletePost\DeletePostCommand.cs" />
+    <Compile Include="Posts\Commands\DeletePost\IDeletePostCommand.cs" />
+    <Compile Include="Posts\Commands\DeletePost\Repository\DeletePostRepositoryFacade.cs" />
+    <Compile Include="Posts\Commands\DeletePost\Repository\IDeletePostRepositoryFacade.cs" />
+    <Compile Include="Posts\Commands\UpdatePost\Factory\IUpdatePostFactory.cs" />
+    <Compile Include="Posts\Commands\UpdatePost\Factory\UpdatePostFactory.cs" />
+    <Compile Include="Posts\Commands\UpdatePost\IUpdatePostCommand.cs" />
+    <Compile Include="Posts\Commands\UpdatePost\Repository\IUpdatePostRepositoryFacade.cs" />
+    <Compile Include="Posts\Commands\UpdatePost\Repository\UpdatePostRepositoryFacade.cs" />
+    <Compile Include="Posts\Commands\UpdatePost\UpdatePostCommand.cs" />
+    <Compile Include="Posts\Commands\UpdatePost\UpdatePostModel.cs" />
+    <Compile Include="Posts\Queries\GetPostDetail\GetPostDetailQuery.cs" />
+    <Compile Include="Posts\Queries\GetPostDetail\IGetPostDetailQuery.cs" />
+    <Compile Include="Posts\Queries\GetPostDetail\PostDetailModel.cs" />
+    <Compile Include="Posts\Queries\GetPostsList\GetPostsListQuery.cs" />
+    <Compile Include="Posts\Queries\GetPostsList\IGetPostsListQuery.cs" />
+    <Compile Include="Posts\Queries\GetPostsList\PostModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\Queries\GetUserList\GetUsersListQuery.cs" />
+    <Compile Include="Users\Queries\GetUserList\IGetUsersListQuery.cs" />
+    <Compile Include="Users\Queries\GetUserList\UserModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Albums\Commands\" />
+    <Folder Include="Users\Commands\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{914001ff-29ba-4b06-9766-fa9d5bf04db1}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

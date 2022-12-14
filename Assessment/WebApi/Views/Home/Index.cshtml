@@ -1,0 +1,36 @@
+﻿<div class="jumbotron">
+    <h1>ASP.NET Web API</h1>
+    <p class="lead">This Web API application is built on .Net Framework 4.8, and approaches CQRS design pattern.</p>
+    <p>@Html.ActionLink("API Details", "Index", "Help", new { area = "" }, null)</p>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Specification</h2>
+        <p>The specification asks the developer to build Web API application, which consists of three main endpoints (/Posts, /Users, /Albums).
+        The solution needs to demonstrate the CRUD operation for one endpoint (/Posts). The specification details can be found in the following link.</p>
+        <p><a class="btn btn-default" href="https://bitbucket.org/silverhorsetechteam/recruitment-tests/src/master/backend-dot-net.md">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Solution Details</h2>
+        <p>The solution is called "Assessment". It contains total four projects. It uses CQRS design pattern and domain centric design.</p>
+        <p>The projects are:</p>
+        <ul>
+            <li>Domain</li>
+            <li>Application</li>
+            <li>Persistence</li>
+            <li>WebApi</li>
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <h2>Setup and Testing</h2>
+        <ol>
+            <li>Open the solution in Visual Studio 2022 (Visual Studio 2019 or above should be installed)</li>
+            <li>This also needs SQL server (version 15.0.2000.5)</li>
+            <li>Set WebApi project as Startup project</li>
+            <li>Build the solution</li>
+            <li>Run the solution (F5)</li>
+            <li>Then each endpoint can be tested by using the browser or POSTMAN API test tool</li>
+        </ol>
+        <p>NOTE: API_Test folder is located in WebApi project, and this folder contains POSTMAN test collection. These can be run using POSTMAN application. (POSTMAN app can be downloaded and installed)</p>
+    </div>
+</div>
